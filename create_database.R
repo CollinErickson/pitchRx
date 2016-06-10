@@ -18,3 +18,8 @@ tbl(my_db,'player')
 tbl(my_db,'action')
 tbl(my_db,'atbat')
 # game, media, coach, player, umpire, hip
+
+ab <- tbl(my_db,'atbat')
+filter(ab,o==1)
+filter(ab,event=='Triple')
+head(as.data.frame(ab))
