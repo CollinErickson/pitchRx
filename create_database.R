@@ -7,7 +7,7 @@ my_db <- src_sqlite("Gameday.sqlite3")
 
 #scrape(start = "2013-08-01", end = "2013-08-01", connect = my_db$con)
 
-files <- c("inning/inning_hit.xml", "miniscoreboard.xml", "players.xml")
+#files <- c("inning/inning_hit.xml", "miniscoreboard.xml", "players.xml")
 #scrape(start = "2015-08-01", end = "2015-08-01", connect=my_db$con, suffix = files)
 #scrape(start = "2015-08-01", end = "2015-08-01", connect=my_db$con)
 
@@ -23,3 +23,6 @@ ab <- tbl(my_db,'atbat')
 filter(ab,o==1)
 filter(ab,event=='Triple')
 head(as.data.frame(ab))
+as.data.frame(ab)$event
+
+sub
